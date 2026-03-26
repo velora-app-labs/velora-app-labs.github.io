@@ -93,7 +93,7 @@
                     <div class="w-3 h-3 bg-black rounded-sm rotate-45"></div>
                 </div>
                 <div class="w-[160px]">
-                    <span class="typewriter font-bold tracking-tight text-lg uppercase mono">Velora<span class="text-blue-500">_App</span><span class="text-orange-500">_Labs</span></span>
+                    <span class="typewriter font-bold tracking-tight text-lg uppercase mono">Velora<span class="text-blue-500">_App</span><span class="text-gray-600">_Labs</span></span>
                 </div>
             </div>
             <div class="flex items-center gap-8">
@@ -159,16 +159,17 @@
                                 <option value="Bug">Bug Report</option>
                                 <option value="Feature Request">Feature Request</option>
                                 <option value="Improvement">Improvement</option>
+                                <option value="App Idea">App Idea</option>
                                 <option value="Other">Other Inquiry</option>
                             </select>
                             <input id="summary" type="text" placeholder="SUBJECT LINE" class="h-14 px-4 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-white/[0.03] border border-white/10 placeholder-gray-700 outline-none focus:border-blue-500 transition-all">
                         </div>
-                        <textarea id="description" rows="6" placeholder="DETAILED TRANSMISSION LOGS..." class="w-full p-4 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-white/[0.03] border border-white/10 placeholder-gray-700 outline-none focus:border-blue-500 transition-all"></textarea>
+                        <textarea id="description" rows="6" placeholder="DETAILED DESCRIPTION..." class="w-full p-4 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-white/[0.03] border border-white/10 placeholder-gray-700 outline-none focus:border-blue-500 transition-all"></textarea>
                         
                         <div id="dropZone" class="upload-area rounded-lg p-12 text-center cursor-pointer group">
                             <input type="hidden" role="uploadcare-uploader" id="fileUploader" data-public-key="04711a5a60d4e2d3665b" data-tabs="file camera" />
                             <div id="state-idle" class="flex flex-col items-center gap-2">
-                                <span class="mono text-[10px] text-gray-500 group-hover:text-blue-400 transition tracking-widest uppercase font-bold">Attach Evidence +</span>
+                                <span class="mono text-[10px] text-gray-500 group-hover:text-blue-400 transition tracking-widest uppercase font-bold">Attach Evidence</span>
                             </div>
                             <div id="state-active" class="hidden mono text-[10px] text-blue-500 animate-pulse font-bold tracking-widest">Uploading Data...</div>
                             <div id="state-done" class="hidden mono text-[10px] text-green-500 font-bold uppercase tracking-widest">Link Established ✓</div>
