@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlugOrPass Privacy Full Disclosure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #3b82f6;
+            --bg: #000000;
+            --card: #0a0a0a;
+            --card-soft: rgba(255, 255, 255, 0.02);
+            --border: #1a1a1a;
+            --text: #ffffff;
+            --muted: #9ca3af;
+            --heading: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            color: var(--heading);
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .glow-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .glow-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .glow-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(59, 130, 246, 0.1) 0%, transparent 52%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+
+        .subtle-card {
+            background: var(--card-soft);
+            border: 1px solid var(--border);
+        }
+
+        .legal-link {
+            color: var(--brand);
+        }
+
+        .meta-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (min-width: 960px) {
+            .meta-grid {
+                grid-template-columns: 0.8fr 0.8fr 1.4fr;
+            }
+        }
+
+        .contact-link {
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        th, td {
+            vertical-align: top;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen text-[15px] leading-7 selection:bg-blue-500/30 selection:text-blue-200">
+    <div class="noise"></div>
+    <main class="max-w-[1400px] mx-auto px-6 sm:px-8 py-10 sm:py-16 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <a href="/" class="inline-flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors w-fit">
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">Velora App Labs</span>
+                <span>/</span>
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">PlugOrPass Privacy</span>
+            </a>
+
+            <section class="glow-card rounded-2xl p-8 sm:p-12 mt-6">
+                <div class="relative max-w-4xl">
+                    <div class="mono text-[11px] uppercase tracking-[0.28em] text-gray-500 mb-4">Full Disclosure</div>
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tighter leading-[0.95] mb-5">
+                        PlugOrPass Privacy Policy
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-xl max-w-3xl font-light leading-relaxed">
+                        This policy explains what PlugOrPass stores, what it transmits off-device, and when those transfers occur. It is based on the current app implementation reviewed for this disclosure.
+                    </p>
+                    <div class="mt-8 grid meta-grid gap-4">
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Last Updated</div>
+                            <div class="font-semibold text-white">March 30, 2026</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Operator</div>
+                            <div class="font-semibold text-white">Velora App Labs</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Contact</div>
+                            <a href="mailto:veloralabssupport@gmail.com" class="contact-link legal-link font-semibold hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-6 mt-8">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Summary</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>PlugOrPass primarily stores your comparison data on your device. The app does not appear to include third-party ad SDKs or behavioral advertising trackers in the current codebase reviewed for this disclosure.</p>
+                        <p>Your data is sent off-device only for specific features you choose to use, including optional location lookup, VIN decoding, fuel economy lookups, optional AI autofill, optional Sign in with Apple plus iCloud sync, optional comparison sharing, App Store subscription processing, and feedback emails you decide to send.</p>
+                        <p>If you do not use optional cloud, AI, or sharing features, PlugOrPass operates mostly with local storage plus the vehicle and pricing lookup requests needed to calculate results.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">At a Glance</h2>
+                    <div class="space-y-5 text-sm leading-6 text-gray-400">
+                        <div>
+                            <div class="font-semibold text-white mb-1">Data stored locally</div>
+                            <p>Saved comparisons, addresses, user profile inputs, selected AI settings, flagged AI results, crash reports waiting to be sent, and free-comparison counters.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Sensitive inputs</div>
+                            <p>Address details, optional location coordinates, VINs, vehicle selections, ownership assumptions, insurance profile inputs, and anything you include in AI prompts or support emails.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Optional cloud storage</div>
+                            <p>Saved comparisons can sync to your private iCloud database after Sign in with Apple. Shared comparison codes use CloudKit public storage and expire after about 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Information PlugOrPass Collects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-gray-400">
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Information you enter</h3>
+                        <p class="leading-relaxed">Street, city, state, ZIP code, vehicle details, VINs, ownership years, mileage, fuel prices, insurance assumptions, maintenance costs, tire data, saved comparisons, and any feedback or support messages you write.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Approximate or device-derived data</h3>
+                        <p class="leading-relaxed">If you grant location permission, the app can request your current location and convert it into an address and coordinates for localized pricing and comparison inputs.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Account and subscription data</h3>
+                        <p class="leading-relaxed">If you use Sign in with Apple, the app stores your Apple user identifier in Keychain and may store the name and email Apple provides. Subscription status is handled through Apple StoreKit.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">AI configuration data</h3>
+                        <p class="leading-relaxed">If you enable AI tools, your chosen provider and model settings are stored locally. API keys are stored in iOS Keychain rather than plain local preferences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">How Data Is Used</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-400">
+                    <div class="subtle-card p-5">To build and save vehicle ownership comparisons.</div>
+                    <div class="subtle-card p-5">To localize fuel and electricity pricing and geocode addresses.</div>
+                    <div class="subtle-card p-5">To decode VINs and retrieve public vehicle economy data.</div>
+                    <div class="subtle-card p-5">To provide optional AI-assisted autofill and estimation features.</div>
+                    <div class="subtle-card p-5">To sync saved comparisons through your private iCloud account if you enable that feature.</div>
+                    <div class="subtle-card p-5">To process subscriptions and restore purchases through Apple.</div>
+                    <div class="subtle-card p-5">To create temporary share codes when you explicitly share a comparison.</div>
+                    <div class="subtle-card p-5">To help diagnose bugs if you choose to send feedback with logs or crash information attached.</div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">When Data Leaves Your Device</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left min-w-[760px] border-collapse">
+                        <thead>
+                            <tr class="text-xs uppercase tracking-[0.18em] text-gray-500 border-b border-[color:var(--border)]">
+                                <th class="py-3 pr-4">Feature</th>
+                                <th class="py-3 pr-4">Data involved</th>
+                                <th class="py-3 pr-4">Recipient</th>
+                                <th class="py-3">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-400 align-top">
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Address geocoding</td>
+                                <td class="py-4 pr-4">Your entered address or your current device location.</td>
+                                <td class="py-4 pr-4">Apple location/geocoding services via iOS.</td>
+                                <td class="py-4">Used to convert addresses and coordinates for localized pricing inputs.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Fuel economy lookup</td>
+                                <td class="py-4 pr-4">Vehicle year, make, model, trim, and selected vehicle identifiers.</td>
+                                <td class="py-4 pr-4"><a class="legal-link hover:text-blue-400 transition-colors" href="https://www.fueleconomy.gov/">fueleconomy.gov</a></td>
+                                <td class="py-4">Used for MPG, MPGe, range, and national fuel-price data.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">VIN decoding</td>
+                                <td class="py-4 pr-4">The VIN you provide.</td>
+                                <td class="py-4 pr-4"><a class="legal-link hover:text-blue-400 transition-colors" href="https://vpic.nhtsa.dot.gov/">NHTSA VPIC</a></td>
+                                <td class="py-4">Used to derive make, model, trim, body class, and related specifications.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Energy price lookup</td>
+                                <td class="py-4 pr-4">State or region-level lookup context.</td>
+                                <td class="py-4 pr-4"><a class="legal-link hover:text-blue-400 transition-colors" href="https://www.eia.gov/opendata/">U.S. Energy Information Administration</a></td>
+                                <td class="py-4">If unavailable, the app can fall back to bundled price data.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Optional AI tools</td>
+                                <td class="py-4 pr-4">Your prompts and any vehicle, address, driver-profile, insurance, maintenance, tire, or pricing context included in those prompts.</td>
+                                <td class="py-4 pr-4">The AI provider you choose: Anthropic, OpenAI, Perplexity, or Google Gemini.</td>
+                                <td class="py-4">Only occurs when you configure an API key and use the AI features.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Private comparison sync</td>
+                                <td class="py-4 pr-4">Saved comparison records, including address, vehicles, ownership inputs, and calculated results.</td>
+                                <td class="py-4 pr-4">Apple CloudKit private database in container</td>
+                                <td class="py-4">Requires Sign in with Apple and available iCloud account status.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Share code export</td>
+                                <td class="py-4 pr-4">The full comparison data as JSON plus a short vehicle summary.</td>
+                                <td class="py-4 pr-4">Apple CloudKit public database.</td>
+                                <td class="py-4">Share records are created only when you generate a code and are set to expire after about 24 hours.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Feedback email</td>
+                                <td class="py-4 pr-4">Your message plus optional AI logs, flagged AI outputs, crash logs, user ID, device model, iOS version, and app version.</td>
+                                <td class="py-4 pr-4">Your configured Mail account and Velora support at <a href="mailto:veloralabssupport@gmail.com" class="legal-link contact-link hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>.</td>
+                                <td class="py-4">Nothing is emailed unless you explicitly send it.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 pr-4 font-semibold text-white">Subscription purchase</td>
+                                <td class="py-4 pr-4">Purchase and entitlement data needed for billing.</td>
+                                <td class="py-4 pr-4">Apple App Store / StoreKit.</td>
+                                <td class="py-4">Billing is processed by Apple, not by Velora App Labs directly.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-5">Local Storage and Retention</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>Saved comparisons are stored in a local SQLite database under the app's Application Support directory. User profile settings, feature counters, AI model preferences, flagged AI results, and pending crash logs are stored locally in app preferences. API keys and the Apple user identifier are stored in iOS Keychain.</p>
+                        <p>Data remains on the device until you delete it, clear the app, remove items inside the app, uninstall the app, or overwrite local records. Shared comparison codes in CloudKit public storage are intended to expire roughly 24 hours after creation.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-5">Children and Sensitive Data</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>PlugOrPass is a vehicle cost comparison tool and is not designed specifically for children. The app is not intended to collect special categories of sensitive personal data beyond the information users choose to enter for comparison, account, support, and optional AI features.</p>
+                        <p>You should avoid including unnecessary personal information in AI prompts, feedback emails, shared comparisons, or free-form notes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-5">Your Choices</h2>
+                    <div class="space-y-3 text-gray-400 font-light leading-relaxed">
+                        <p>You can decline location permission and enter an address manually.</p>
+                        <p>You can avoid Sign in with Apple and use the app without iCloud sync.</p>
+                        <p>You can avoid AI features entirely by not adding API keys and not sending AI prompts.</p>
+                        <p>You can choose not to generate share codes and not to send feedback emails or crash logs.</p>
+                        <p>You can contact support to request help understanding or deleting data under your control.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-5">Security</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>The current implementation stores API keys and the Apple user identifier in Keychain rather than plain text settings. Other content such as saved comparisons and preferences is stored using standard iOS app storage mechanisms.</p>
+                        <p>No method of storage or transmission is perfectly secure. If you believe there is a privacy or security issue, contact <a href="mailto:veloralabssupport@gmail.com" class="legal-link contact-link hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Policy Changes</h2>
+                <p class="text-gray-400 max-w-4xl font-light leading-relaxed">
+                    This disclosure may be updated as PlugOrPass changes. Material updates will be reflected by changing the date at the top of this page. If the app adds new integrations, new analytics, or new sharing behavior, this page should be revised to match the shipped implementation.
+                </p>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.glow-card').forEach(card => {
+            card.onmousemove = e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+            };
+        });
+    </script>
+</body>
+</html>
