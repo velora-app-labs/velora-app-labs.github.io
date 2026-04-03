@@ -70,6 +70,14 @@
         }
         .glow-card:hover::before { opacity: 1; }
 
+        .app-icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        }
+
         .uploadcare--widget { display: none !important; }
         .upload-area {
             border: 1px dashed var(--border);
@@ -113,12 +121,11 @@
             </p>
         </section>
 
-        <section id="applications" class="py-32 grid grid-cols-12 gap-6">
-            <div class="col-span-12 lg:col-span-8 glow-card rounded-2xl p-12 flex flex-col justify-between min-h-[480px]">
+        <section id="applications" class="py-32 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="glow-card rounded-2xl p-12 flex flex-col justify-between min-h-[480px]">
                 <div class="flex justify-between items-start">
-                    <div class="w-16 h-16 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14H11V21L20 10H13Z"/></svg>
-                    </div>
+                    <img src="/assets/apps/plugorpass.png" alt="PlugOrPass app icon" class="app-icon">
+                    <span class="mono text-[10px] uppercase tracking-[0.28em] text-gray-500">Available Now</span>
                 </div>
                 <div>
                     <h3 class="text-5xl font-bold mb-6 tracking-tighter">PlugOrPass</h3>
@@ -131,15 +138,34 @@
                         Privacy Disclosure
                         <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
+                    <a href="/plugorpass/terms" class="inline-flex items-center text-gray-300 font-bold text-xs uppercase tracking-widest group hover:text-white transition-colors">
+                        Terms of Use
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
                 </div>
             </div>
 
-            <div class="col-span-12 lg:col-span-4 glow-card rounded-2xl p-10 flex flex-col items-center justify-center text-center">
-                <div class="w-24 h-24 rounded-full border border-dashed border-gray-800 flex items-center justify-center mb-8">
-                    <div class="w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
+            <div class="glow-card rounded-2xl p-12 flex flex-col justify-between min-h-[480px]">
+                <div class="flex justify-between items-start">
+                    <img src="/assets/apps/buyorrent.png" alt="Buy or Rent app icon" class="app-icon">
+                    <span class="mono text-[10px] uppercase tracking-[0.28em] text-gray-500">Available Now</span>
                 </div>
-                <h4 class="text-sm font-bold uppercase tracking-[0.3em] mb-3 mono text-gray-400">Incubating</h4>
-                <p class="text-xs text-gray-600 leading-relaxed">Synthesizing new protocols for <br> community governance & wealth.</p>
+                <div>
+                    <h3 class="text-5xl font-bold mb-6 tracking-tighter">Buy or Rent</h3>
+                    <p class="text-gray-400 text-xl max-w-xl font-light leading-relaxed">
+                        Housing comparison toolkit for evaluating buying, renting, and shared-living scenarios with optional AI-assisted estimates and listing extraction.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="/privacy" class="inline-flex items-center text-blue-500 font-bold text-xs uppercase tracking-widest group">
+                        Privacy Disclosure
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="/terms" class="inline-flex items-center text-gray-300 font-bold text-xs uppercase tracking-widest group hover:text-white transition-colors">
+                        Terms of Use
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -193,6 +219,9 @@
             <span class="mono text-[10px] text-gray-700 tracking-[0.4em] uppercase">Engineering for the collective good</span>
             <div class="flex items-center gap-6">
                 <a href="/plugorpass/privacy" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">PlugOrPass Privacy</a>
+                <a href="/plugorpass/terms" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">PlugOrPass Terms</a>
+                <a href="/privacy" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Buy or Rent Privacy</a>
+                <a href="/terms" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Buy or Rent Terms</a>
                 <span class="mono text-[10px] text-gray-800 uppercase">© 2026 Velora_Apps_Infrastructure</span>
             </div>
         </div>
