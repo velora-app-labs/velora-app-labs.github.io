@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Buy vs Rent Terms of Use</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #3b82f6;
+            --bg: #000000;
+            --card: #0a0a0a;
+            --card-soft: rgba(255, 255, 255, 0.02);
+            --border: #1a1a1a;
+            --text: #ffffff;
+            --heading: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            color: var(--heading);
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .glow-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .glow-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .glow-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(59, 130, 246, 0.1) 0%, transparent 52%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+
+        .subtle-card {
+            background: var(--card-soft);
+            border: 1px solid var(--border);
+        }
+
+        .legal-link {
+            color: var(--brand);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen text-[15px] leading-7 selection:bg-blue-500/30 selection:text-blue-200">
+    <div class="noise"></div>
+    <main class="max-w-[1400px] mx-auto px-6 sm:px-8 py-10 sm:py-16 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <a href="/" class="inline-flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors w-fit">
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">Velora App Labs</span>
+                <span>/</span>
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">Home Buy vs Rent Terms</span>
+            </a>
+
+            <section class="glow-card rounded-2xl p-8 sm:p-12 mt-6">
+                <div class="relative max-w-4xl">
+                    <div class="mono text-[11px] uppercase tracking-[0.28em] text-gray-500 mb-4">Legal Terms</div>
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tighter leading-[0.95] mb-5">
+                        Home Buy vs Rent Terms of Use
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-xl max-w-3xl font-light leading-relaxed">
+                        Home Buy vs Rent is distributed through Apple platforms under Apple's standard Licensed Application End User License Agreement. These terms explain how that agreement applies to this app and provide product-specific details.
+                    </p>
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="subtle-card p-4 sm:p-5">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Last Updated</div>
+                            <div class="font-semibold text-white">April 2, 2026</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Operator</div>
+                            <div class="font-semibold text-white">Velora App Labs</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Contact</div>
+                            <a href="mailto:veloralabssupport@gmail.com" class="legal-link font-semibold hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 mt-8">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Applicable Agreement</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>Your use of the Home Buy vs Rent iOS application is governed by Apple's Licensed Application End User License Agreement for apps distributed through the App Store.</p>
+                        <p>You can review the agreement here: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="legal-link hover:text-blue-400 transition-colors">Apple Standard EULA</a>.</p>
+                        <p>If any support or contact information on this page differs from the generic text in Apple's agreement, this page controls only for those app-specific details. The underlying license terms remain Apple's standard EULA.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Related Legal Links</h2>
+                    <div class="space-y-4 text-sm leading-6 text-gray-400">
+                        <div>
+                            <div class="font-semibold text-white mb-1">Privacy Policy</div>
+                            <a href="/homebuyvsrent/privacy/" class="legal-link hover:text-blue-400 transition-colors">home buy vs rent privacy disclosure</a>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Support</div>
+                            <a href="mailto:veloralabssupport@gmail.com" class="legal-link hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Product-Specific Terms</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-gray-400">
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">License scope</h3>
+                        <p class="leading-relaxed">Home Buy vs Rent is licensed, not sold, to you for use on Apple-branded devices you own or control, subject to the rights and restrictions in Apple's standard EULA.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Estimates and assumptions</h3>
+                        <p class="leading-relaxed">The app provides comparison and estimation tools based on assumptions, local calculations, optional AI responses, and data you enter. Results are informational only and may not match real market outcomes.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Acceptable use</h3>
+                        <p class="leading-relaxed">You agree not to misuse the app, interfere with its operation, attempt unauthorized access, upload unlawful content, or use the app in a way that violates applicable law or Apple's platform rules.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Support contact</h3>
+                        <p class="leading-relaxed">Questions about Home Buy vs Rent support, privacy, or account-related issues can be directed to <a href="mailto:veloralabssupport@gmail.com" class="legal-link hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Third-Party Services</h2>
+                <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                    <p>Some features depend on third-party services you choose to use, such as Apple Maps for address lookup, Apple CloudKit for share codes, and supported AI providers for optional estimate and image-analysis features.</p>
+                    <p>Your use of those services may also be subject to the third party's own terms, privacy policies, and availability constraints.</p>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Disclaimers</h2>
+                <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                    <p>Home Buy vs Rent provides housing comparison and estimation tools. It is not financial, investment, tax, legal, lending, or real-estate advice, and it should not be used as the sole basis for a housing decision.</p>
+                    <p>To the extent allowed by law, the app is provided under the warranty and liability framework described in Apple's standard EULA.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.glow-card').forEach(card => {
+            card.onmousemove = e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+            };
+        });
+    </script>
+</body>
+</html>

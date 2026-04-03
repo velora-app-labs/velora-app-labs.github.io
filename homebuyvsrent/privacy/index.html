@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Buy vs Rent Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #3b82f6;
+            --bg: #000000;
+            --card: #0a0a0a;
+            --card-soft: rgba(255, 255, 255, 0.02);
+            --border: #1a1a1a;
+            --text: #ffffff;
+            --heading: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            color: var(--heading);
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .glow-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .glow-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .glow-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(59, 130, 246, 0.1) 0%, transparent 52%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+
+        .subtle-card {
+            background: var(--card-soft);
+            border: 1px solid var(--border);
+        }
+
+        .legal-link {
+            color: var(--brand);
+        }
+
+        .meta-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (min-width: 960px) {
+            .meta-grid {
+                grid-template-columns: 0.8fr 0.8fr 1.4fr;
+            }
+        }
+
+        .contact-link {
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        th, td {
+            vertical-align: top;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen text-[15px] leading-7 selection:bg-blue-500/30 selection:text-blue-200">
+    <div class="noise"></div>
+    <main class="max-w-[1400px] mx-auto px-6 sm:px-8 py-10 sm:py-16 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <a href="/" class="inline-flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors w-fit">
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">Velora App Labs</span>
+                <span>/</span>
+                <span class="mono text-[11px] uppercase tracking-[0.24em]">Home Buy vs Rent Privacy</span>
+            </a>
+
+            <section class="glow-card rounded-2xl p-8 sm:p-12 mt-6">
+                <div class="relative max-w-4xl">
+                    <div class="mono text-[11px] uppercase tracking-[0.28em] text-gray-500 mb-4">Full Disclosure</div>
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tighter leading-[0.95] mb-5">
+                        Home Buy vs Rent Privacy Policy
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-xl max-w-3xl font-light leading-relaxed">
+                        This policy explains what Home Buy vs Rent stores, what it sends off-device, and when those transfers happen based on the current app implementation reviewed for this disclosure.
+                    </p>
+                    <div class="mt-8 grid meta-grid gap-4">
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Last Updated</div>
+                            <div class="font-semibold text-white">April 2, 2026</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Operator</div>
+                            <div class="font-semibold text-white">Velora App Labs</div>
+                        </div>
+                        <div class="subtle-card p-4 sm:p-5 min-w-0">
+                            <div class="mono text-[10px] uppercase tracking-[0.24em] text-gray-600 mb-2">Contact</div>
+                            <a href="mailto:veloralabssupport@gmail.com" class="contact-link legal-link font-semibold hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-6 mt-8">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Summary</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>Home Buy vs Rent primarily stores your comparison data on your device. The current codebase reviewed for this disclosure does not appear to include third-party ad SDKs or behavioral advertising trackers.</p>
+                        <p>Your data is sent off-device only for features you choose to use, including Apple Maps address autocomplete, optional AI-generated estimates, optional AI listing extraction from images, temporary CloudKit share codes, and feedback emails you decide to send.</p>
+                        <p>If you do not use AI, sharing, or feedback features, the app mostly operates with local storage and Apple-provided address lookup services.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">At a Glance</h2>
+                    <div class="space-y-5 text-sm leading-6 text-gray-400">
+                        <div>
+                            <div class="font-semibold text-white mb-1">Data stored locally</div>
+                            <p>Home entries, household profile details, onboarding state, AI provider selections, selected models, currency preference, custom feature lists, and optional API logs.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Sensitive inputs</div>
+                            <p>Addresses, household and workplace details, pricing assumptions, notes, uploaded listing screenshots or photos, and anything you send in prompts or support emails.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Cloud sharing</div>
+                            <p>If you create a share code, the selected homes are uploaded to a public CloudKit database and are set to expire after about 7 days.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Information Home Buy vs Rent Collects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-gray-400">
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Information you enter</h3>
+                        <p class="leading-relaxed">Home addresses, ZIP codes, household members, commute and workplace details, budget assumptions, rent or home price inputs, amenities, notes, and any feedback messages you write.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Images you choose</h3>
+                        <p class="leading-relaxed">If you use the camera or photo-library import feature, the app processes listing screenshots or photos to extract property details. Those images are only transmitted when you intentionally use AI listing extraction.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Configuration data</h3>
+                        <p class="leading-relaxed">Selected AI provider, chosen text and vision models, currency preference, and onboarding status are stored locally. API keys are stored in iOS Keychain rather than plain preferences.</p>
+                    </div>
+                    <div class="subtle-card p-5">
+                        <h3 class="text-xl font-semibold mb-3">Diagnostic and support data</h3>
+                        <p class="leading-relaxed">If enabled, API request logs are stored locally. If you send feedback, the email can include device model, iOS version, app version, AI provider configuration, and attached API logs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">How Data Is Used</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-400">
+                    <div class="subtle-card p-5">To build, compare, rank, and save housing scenarios.</div>
+                    <div class="subtle-card p-5">To autocomplete and resolve addresses through Apple Maps services.</div>
+                    <div class="subtle-card p-5">To provide optional AI-assisted housing estimates and analysis.</div>
+                    <div class="subtle-card p-5">To extract listing details from photos or screenshots you choose to analyze.</div>
+                    <div class="subtle-card p-5">To generate temporary share codes when you explicitly share selected homes.</div>
+                    <div class="subtle-card p-5">To help diagnose bugs if you choose to send feedback with logs or device details.</div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">When Data Leaves Your Device</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left min-w-[760px] border-collapse">
+                        <thead>
+                            <tr class="text-xs uppercase tracking-[0.18em] text-gray-500 border-b border-[color:var(--border)]">
+                                <th class="py-3 pr-4">Feature</th>
+                                <th class="py-3 pr-4">Data involved</th>
+                                <th class="py-3 pr-4">Recipient</th>
+                                <th class="py-3">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-400 align-top">
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Address autocomplete</td>
+                                <td class="py-4 pr-4">Address fragments and selected place lookups</td>
+                                <td class="py-4 pr-4">Apple Maps / MapKit</td>
+                                <td class="py-4">Used when you type an address or choose an autocomplete result.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">AI estimates</td>
+                                <td class="py-4 pr-4">Prompt text built from your home and household inputs</td>
+                                <td class="py-4 pr-4">Anthropic, OpenAI, Perplexity, or Google Gemini depending on your selected provider</td>
+                                <td class="py-4">Only used if you configure an API key and request AI-powered estimates.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Camera or screenshot listing scan</td>
+                                <td class="py-4 pr-4">Listing image plus extraction prompt</td>
+                                <td class="py-4 pr-4">Anthropic, OpenAI, or Google Gemini depending on your selected vision provider</td>
+                                <td class="py-4">Only used when you run the listing extraction feature. Perplexity is not used for vision in the current app.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Model refresh or connection test</td>
+                                <td class="py-4 pr-4">Your API key and provider request metadata</td>
+                                <td class="py-4 pr-4">The selected AI provider</td>
+                                <td class="py-4">Used when you test a connection or refresh available model lists in Settings.</td>
+                            </tr>
+                            <tr class="border-b border-[color:var(--border)]">
+                                <td class="py-4 pr-4 font-semibold text-white">Share code export</td>
+                                <td class="py-4 pr-4">Encoded home data, generated code, timestamps, and expiry time</td>
+                                <td class="py-4 pr-4">Apple CloudKit public database</td>
+                                <td class="py-4">Current implementation sets share code records to expire after about 7 days.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 pr-4 font-semibold text-white">Feedback email</td>
+                                <td class="py-4 pr-4">Your message, device and app metadata, and optional API log attachment</td>
+                                <td class="py-4 pr-4">Your configured mail provider and Velora App Labs support inbox</td>
+                                <td class="py-4">Sent only if you choose to send feedback.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 mt-6">
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-6">Storage and Retention</h2>
+                    <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                        <p>Most app data is stored locally on your device until you edit or delete it, or until you use the app's clear-data controls.</p>
+                        <p>API keys are stored in Keychain. Other app settings and profile data are stored through local iOS app storage such as UserDefaults.</p>
+                        <p>Shared home records created through CloudKit are intended to expire after about 7 days based on the current code path.</p>
+                    </div>
+                </div>
+
+                <div class="glow-card rounded-2xl p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold tracking-tight mb-6">Your Choices</h2>
+                    <div class="space-y-4 text-sm leading-6 text-gray-400">
+                        <div>
+                            <div class="font-semibold text-white mb-1">Use local mode</div>
+                            <p>You can avoid AI features entirely by not adding API keys. The app then uses local heuristics instead of provider calls.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Clear saved data</div>
+                            <p>The Settings screen includes a clear-all-data flow that resets homes, household profile, onboarding state, and AI keys.</p>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white mb-1">Contact us</div>
+                            <p>Questions about privacy can be sent to <a href="mailto:veloralabssupport@gmail.com" class="legal-link hover:text-blue-400 transition-colors">veloralabssupport@gmail.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Children and Security</h2>
+                <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                    <p>Home Buy vs Rent is not directed to children under 13. Do not submit personal information through the app if you are under 13.</p>
+                    <p>No app can guarantee absolute security. We rely on Apple platform protections, local device storage, Keychain storage for API keys, and the security practices of the external services you choose to use.</p>
+                </div>
+            </section>
+
+            <section class="glow-card rounded-2xl p-6 sm:p-8 mt-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-6">Changes to This Policy</h2>
+                <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                    <p>We may update this policy as the app changes. The date at the top of this page reflects the latest published revision.</p>
+                    <p>For related legal terms, see the <a href="/homebuyvsrent/terms/" class="legal-link hover:text-blue-400 transition-colors">Home Buy vs Rent Terms of Use</a>.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.glow-card').forEach(card => {
+            card.onmousemove = e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+            };
+        });
+    </script>
+</body>
+</html>

@@ -147,21 +147,21 @@
 
             <div class="glow-card rounded-2xl p-12 flex flex-col justify-between min-h-[480px]">
                 <div class="flex justify-between items-start">
-                    <img src="/assets/apps/buyorrent.png" alt="Buy or Rent app icon" class="app-icon">
+                    <img src="/assets/apps/buyorrent.png" alt="Home Buy vs Rent app icon" class="app-icon">
                     <span class="mono text-[10px] uppercase tracking-[0.28em] text-gray-500">Available Now</span>
                 </div>
                 <div>
-                    <h3 class="text-5xl font-bold mb-6 tracking-tighter">Buy or Rent</h3>
+                    <h3 class="text-5xl font-bold mb-6 tracking-tighter">Home Buy vs Rent</h3>
                     <p class="text-gray-400 text-xl max-w-xl font-light leading-relaxed">
                         Housing comparison toolkit for evaluating buying, renting, and shared-living scenarios with optional AI-assisted estimates and listing extraction.
                     </p>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="/privacy" class="inline-flex items-center text-blue-500 font-bold text-xs uppercase tracking-widest group">
+                    <a href="/homebuyvsrent/privacy" class="inline-flex items-center text-blue-500 font-bold text-xs uppercase tracking-widest group">
                         Privacy Disclosure
                         <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
-                    <a href="/terms" class="inline-flex items-center text-gray-300 font-bold text-xs uppercase tracking-widest group hover:text-white transition-colors">
+                    <a href="/homebuyvsrent/terms" class="inline-flex items-center text-gray-300 font-bold text-xs uppercase tracking-widest group hover:text-white transition-colors">
                         Terms of Use
                         <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -220,8 +220,8 @@
             <div class="flex items-center gap-6">
                 <a href="/plugorpass/privacy" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">PlugOrPass Privacy</a>
                 <a href="/plugorpass/terms" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">PlugOrPass Terms</a>
-                <a href="/privacy" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Buy or Rent Privacy</a>
-                <a href="/terms" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Buy or Rent Terms</a>
+                <a href="/homebuyvsrent/privacy" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Home Buy vs Rent Privacy</a>
+                <a href="/homebuyvsrent/terms" class="mono text-[10px] text-gray-700 tracking-[0.25em] uppercase hover:text-blue-500 transition-colors">Home Buy vs Rent Terms</a>
                 <span class="mono text-[10px] text-gray-800 uppercase">© 2026 Velora_Apps_Infrastructure</span>
             </div>
         </div>
@@ -229,11 +229,12 @@
 
     <script>
         // Typing animation finish handler
-        const typewriter = document.querySelector('.typewriter');
-        typewriter.addEventListener('animationend', (e) => {
-            if (e.animationName === 'typing') {
-                typewriter.classList.add('done');
-            }
+        document.querySelectorAll('.typewriter').forEach(typewriter => {
+            typewriter.addEventListener('animationend', (e) => {
+                if (e.animationName === 'typing') {
+                    typewriter.classList.add('done');
+                }
+            });
         });
 
         // Interactive Glow Effect
@@ -279,7 +280,8 @@
                              (url ? `Evidence Link: ${url}\n` : '') +
                              `\n---\nSent via Velora App Labs Community Support Website`;
                 
-                const mailto = `mailto:veloralabssupport@gmail.com?subject=[${cat}] ${sum}&body=${encodeURIComponent(body)}`;
+                const subject = encodeURIComponent(`[${cat}] ${sum}`);
+                const mailto = `mailto:veloralabssupport@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
                 window.location.href = mailto;
                 btn.innerText = "GENERATE SUPPORT EMAIL";
             };
